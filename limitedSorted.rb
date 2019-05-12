@@ -1,6 +1,4 @@
 class Array
-
-	arr = []
 	
 	def initialize(a,b,c,d,e,f,g,h,i,j)
 		@arr = [a,b,c,d,e,f,g,h,i,j]			
@@ -35,7 +33,7 @@ end
 #print("\namax: ")
 #y = gets
 
-nw = Array.new -5,-4,-3,-2,-1,1,2,3,-44,5
+nw = Array.new 1,2,3,4,5,6,7,8,9,10
 puts nw.limited(1,10)
 puts nw.sorted?
 
