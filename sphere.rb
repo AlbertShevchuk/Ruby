@@ -13,18 +13,29 @@ class Sphere
 end
 
 class Ball < Sphere
-	@@color = "Yellow"
+	def initialize(radius,color)
+		super(radius)
+		@color = color
+	end
+	
+	def show
+	"#@color and the radius of the ball is #@radius"
+	end
 end
 
 class MyBall < Ball
-	@@owner = "Albert"
+	def initialize(radius,color,owner)
+		super(radius,color)
+		@owner = owner
+	end
+	
 	def show
-		print "The owner of the ball is " + @@owner + "\n"
-		print "The color of the ball is " + @@color + "\n"
+		puts "The owner of the ball is " + @owner
+		puts "The color of the ball is " + super
 		print "The area of " + {Sphere:area}.to_s + "\n"
 		print "The area of " + {Sphere:volume}.to_s
 	end
 end
 
-nw = MyBall.new 5
+nw = MyBall.new 2, "yellow", "Albert"
 nw.show
