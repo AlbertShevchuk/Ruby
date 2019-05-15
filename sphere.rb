@@ -39,3 +39,4 @@ end
 
 nw = MyBall.new 2, "yellow", "Albert"
 nw.show
+puts nw.area
